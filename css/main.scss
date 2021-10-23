@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.score {
+  position: fixed;
+  z-index: 10;
+  right: 1rem;
+  top: 1rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.start {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.disable {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  width: 200px;
+
+  &.active {
+    display: flex;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+    i {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+.left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 100;
+}
+.right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 100;
+}
