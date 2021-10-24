@@ -1,7 +1,7 @@
 class Game {
   constructor() {
     this.colors = [0xdd0b0b, 0xdd690b, 0x74cc10, 0xe24dce];
-    this.velocity = 0.5;
+    this.velocity = 0.4;
     this.startPosition = -25;
     this.collusion = false;
     this.keyUpEvents = false;
@@ -205,7 +205,7 @@ class Game {
     let car = c.position;
     let enemyCar = eC.position;
 
-    if (car.x != enemyCar.x && enemyCar.z + 3.5 === 20 && !this.collusion) {
+    if (enemyCar.z > 20 && !this.collusion) {
       this.score += this.scoreValue;
       document.querySelector(".score").innerHTML = this.score;
     }
